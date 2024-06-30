@@ -1,18 +1,27 @@
-const STARSHIP_BASE_URL = "https://swapi.dev/api/starships/";
+const BASE_URL = "https://swapi.dev/api/starships/";
+
+const fetchAllStarships = async () => {
+  try {
+    const response = await fetch(BASE_URL);
+    const data = await response.json();
+    return data.results;
+  } catch (error) {
+    console.error("Error fetching starships:", error);
+    throw error;
+  }
+};
 
 const starshipSearch = async (starshipNum) => {
   try {
     const queryString = `${starshipNum}`;
-    const res = await fetch(STARSHIP_BASE_URL + queryString);
+    const res = await fetch(BASE_URL + queryString);
     const data = await res.json();
     console.log("Data:", data);
     return data;
   } catch (error) {
-    console.log(error);
-    console.log(
-      "There was an issue with the starship api request from the StarshipSearch function"
-    );
+    console.error("Error fetching starship:", error);
+    throw error;
   }
 };
 
-export { starshipSearch };
+export { fetchAllStarships, starshipSearch };

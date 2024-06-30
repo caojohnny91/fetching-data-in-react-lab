@@ -4,9 +4,9 @@ const StarshipCard = (props) => {
   return (
     <>
       <h2>Starship Card Details</h2>
-      <p>Class: {props.starships.class}</p>
-      <p>Manufacturer: {props.starships.manufacturer}</p>
-      <p>Model: {props.starships.model}</p>
+      <p>Class: {props.starship.starship_class}</p>
+      <p>Manufacturer: {props.starship.manufacturer}</p>
+      <p>Model: {props.starship.model}</p>
     </>
   );
 };
