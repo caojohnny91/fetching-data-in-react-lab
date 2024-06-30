@@ -5,6 +5,7 @@ const StarshipSearch = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    props.fetchData(starship);
     setStarship("");
   };
 
