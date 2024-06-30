@@ -6,6 +6,7 @@ const starshipSearch = async (starshipNum) => {
     const res = await fetch(STARSHIP_BASE_URL + queryString);
     const data = await res.json();
     console.log("Data:", data);
+    return data;
   } catch (error) {
     console.log(error);
     console.log(

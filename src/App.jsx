@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import * as starshipService from "./services/starshipService";
 import StarshipSearch from "./components/StarshipSearch";
+import StarshipCard from "./components/StarshipCard";
 // import StarshipList from "./components/StarshipList";
 
 function App() {
@@ -19,14 +20,11 @@ function App() {
 
   console.log("State:", starships);
 
-  // useEffect(() => {
-
-  // }, []);
-
   return (
     <>
       <h1>Star Wars API</h1>
       <StarshipSearch fetchData={fetchData} />
+      <StarshipCard starships={starships} />
     </>
   );
 }
