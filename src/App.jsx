@@ -10,7 +10,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchDefaultData = async () => {
       try {
         const data = await starshipService.fetchAllStarships();
         setStarships(data);
@@ -21,7 +21,7 @@ function App() {
       }
     };
 
-    fetchData();
+    fetchDefaultData();
   }, []);
 
   const fetchStarshipData = async (starship) => {
