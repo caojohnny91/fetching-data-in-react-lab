@@ -5,9 +5,11 @@ const StarshipList = (props) => {
     <>
       <h2>Starships</h2>
       <p>Number of results: {props.starships.length}</p>
-      {props.starships.map((starship, index) => (
-        <StarshipCard key={index} starship={starship} />
-      ))}
+      <ul>
+        {props.starships.map((starship, index) => (
+          <StarshipCard key={index} starship={starship} />
+        ))}
+      </ul>
     </>
   );
 };

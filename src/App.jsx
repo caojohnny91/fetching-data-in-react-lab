@@ -29,6 +29,7 @@ function App() {
     try {
       const data = await starshipService.starshipSearch(starship);
       const newStarshipState = {
+        name: data.name,
         class: data.starship_class,
         manufacturer: data.manufacturer,
         model: data.model,

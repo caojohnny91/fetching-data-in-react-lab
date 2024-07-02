@@ -3,10 +3,12 @@ const StarshipCard = (props) => {
 
   return (
     <>
-      <h2>Starship Card Details</h2>
-      <p>Class: {props.starship.starship_class}</p>
-      <p>Manufacturer: {props.starship.manufacturer}</p>
-      <p>Model: {props.starship.model}</p>
+      <div className="card">
+        <h2>{props.starship.name}</h2>
+        <p>Class: {props.starship.starship_class}</p>
+        <p>Manufacturer: {props.starship.manufacturer}</p>
+        <p>Model: {props.starship.model}</p>
+      </div>
     </>
   );
 };
