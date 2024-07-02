@@ -34,6 +34,7 @@
 }
 
 .card {
+  flex: auto;
   padding: 0 2em;
   background-color: #333333;
   border-radius: 8px;
